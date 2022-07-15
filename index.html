@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Hand Gesture App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h3 class="btn btn-danger heading"> Hand Gesture </h3>
+        <br>
+        <span> &#9994;</span>
+        <span> &#9995;</span>
+        <span> &#9996;</span>
+        <span> &#128070;</span>
+        <span> &#128071;</span>
+        <span> &#128072;</span>
+      </h3>
+      <br><br>
+
+      <div>
+      <p style="font-size: 22px;">Take your selfie to generate hand gesture
+      	<br>
+        <b style="color: yellow">&#128070;</b>
+        <br>
+        <b style="color: black">&#128071;</b>
+        <br>
+        <b style="color: red">&#128072;</b>
+        <br>
+      </p>
+    </div>
+      <br>
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+        <label> Webcam </label>
+        <div id="camera"> </div>
+        <br>
+        <button class="btn btn-success" onclick="capture();"> Capture Image </button>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+        <label> Prediction 1 - </label>
+        <br>
+        <p id="emotion_1_name"> </p>
+        <p id="emoji_1"> </p>
+        <label> Prediction 2 - </label>
+        <br>
+        <p id="emotion_2_name"> </p>
+        <p id="emoji_2"> </p>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <br>
+        <div id="result"> </div>
+        <br><br>
+        <button class="btn btn-success" onclick="predict()"> Predict Emotion </button>
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
